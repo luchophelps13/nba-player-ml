@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title style="font-family:verdana;font-size:30px">NBA PLAYER MACHINE LEARNING</title>
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" >Linear Regression With <p class = "orange">Sci-kit Learn:</p> </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('about_me')}}">About Me</a>
+                  <a class="nav-link" href="https://github.com/luchophelps13" target="_blank">Github</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <div class="center">
+            <img src = "https://wallpapercave.com/wp/wc3134750.jpg" id = "playerimg" alt = "Lebron" height = "400" width="400">
+
+            <form method="POST" id = "submitPlayer">
+                <br/>
+                <p id="par">{{text}}</p>
+                <br/>
+                <input name = "player" type="text" required="required" minlength="1">
+                <input type = "submit" onclick="toggleDiv()" value="Submit"></input>
+            </form>
+        </div>
+
+        <style>
+            #graph{
+                display: none;
+
+            }
+            .center {
+                margin: 0 auto;
+                text-align: center;
+            }
+            .orange{
+                color: orange;
+            }
+        </style>
+
+        <div id="graph" class = "center">
+            <p>{{pred}}</p>
+            <br/>
+            <img src="data:image/png;base64, {{ plot_url }}" alt="Graph" id = "img">
+        </div>
+
+        <script>
+            function toggleDiv() {
+                var x = document.getElementById('graph');
+                if ( window.getComputedStyle(x, null).getPropertyValue("display") === 'none') {
+                    x.style.display = 'block';
+                } else {
+                    x.style.display = 'none';
+                }
+            }
+        </script>
+    </body>
+</html>
