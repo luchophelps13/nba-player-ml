@@ -8,7 +8,6 @@ from sklearn.metrics import r2_score
 import io
 import urllib.parse
 import base64
-import textwrap
 
 
 app = Flask(__name__)
