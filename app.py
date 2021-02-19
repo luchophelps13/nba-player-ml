@@ -1,10 +1,14 @@
+# WEB APP
 from flask import Flask, render_template, request
+# DATA ANALYSIS
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+# MACHINE LEARNING
 from sklearn.model_selection import train_test_split 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
+# MISC
 import io
 import urllib.parse
 import base64
