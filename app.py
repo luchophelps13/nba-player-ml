@@ -26,7 +26,10 @@ def home():
         fn = inp_player.split()[0].lower()
         ln = inp_player.split()[1].lower()
 
-        df = pd.read_html(f"https://www.landofbasketball.com/nba_players_stats/{fn}_{ln}.htm")
+        try:
+            df = pd.read_html(f"https://www.landofbasketball.com/nba_players_stats/{fn}_{ln}.htm")
+        except:
+            return render_template("index.html", text = f"ERROR!! {fn.capitalize()} {ln.capitalize()} could not be found.")
 
         df = df[1]
         df = df.dropna(axis=0)
