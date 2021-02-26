@@ -19,7 +19,7 @@ View the website here! -> https://nba-machine-learning.herokuapp.com
 
 6. Create a virtualenv ('virtualenv {name of environment} ) & activate it ('{nameofenv}\Scripts\activate') OR use a conda virtual environment
 
-7. Login using heroku login or heroku login -i if the former doesn't work
+7. Login using "heroku login" or "heroku login -i" if the former doesn't work
 
 8. Pip install flask, gunicorn, and the necessary modules
 
