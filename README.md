@@ -23,7 +23,7 @@ View the website here! -> https://nba-machine-learning.herokuapp.com
 
 8. Pip install flask, gunicorn, and the necessary modules
 
-9. Run "pip freeze > requirements.txt", this is so Heroku knows your app is a python app
+9. Run "pip freeze > requirements.txt", this is so Heroku knows your app is a Python app
 
 10. Run "echo (or touch if on Mac/Linux) web: gunicorn app: app (change it if the app is called something besides 'app') > Procfile"
 
