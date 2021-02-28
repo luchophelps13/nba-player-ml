@@ -1,0 +1,20 @@
+.blueish{
+    background-color: lightblue;
+}
+ul li{
+    font-size:22px;
+}
+.indent{
+    text-indent: 1em;
+}
+#graph{
+    display: none;
+
+}
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.orange{
+    color: orange;
+}
