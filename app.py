@@ -23,13 +23,16 @@ def home():
 
         inp_player = request.form["player"]
 
-        fn = inp_player.split()[0].lower()
-        ln = inp_player.split()[1].lower()
+        try: 
+            fn = inp_player.split()[0].lower()
+            ln = inp_player.split()[1].lower()
+        except:
+            pass
 
         try:
             df = pd.read_html(f"https://www.landofbasketball.com/nba_players_stats/{fn}_{ln}.htm")
         except:
-            return render_template("index.html", text = f"ERROR!! {fn.capitalize()} {ln.capitalize()} could not be found.")
+            return render_template("index.html", text = f"ERROR!! '{inp_player}' could not be found.")
 
         df = df[1]
         df = df.dropna(axis=0)
@@ -105,4 +108,4 @@ def about_me():
     return render_template("aboutme.html")
 
 if __name__ == "__main__":
-    app.run() #debug=True
+    app.run() 
