@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset = "UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'style.css') }}">
+        <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title style="font-family:verdana;font-size:30px">NBA PLAYER MACHINE LEARNING</title>
     </head>
 
@@ -35,35 +36,12 @@
             </form>
         </div>
 
-        <style>
-            #graph{
-                display: none;
-
-            }
-            .center {
-                margin: 0 auto;
-                text-align: center;
-            }
-            .orange{
-                color: orange;
-            }
-        </style>
-
         <div id="graph" class = "center">
             <p>{{pred}}</p>
             <br/>
             <img src="data:image/png;base64, {{ plot_url }}" alt="Graph" id = "img">
         </div>
 
-        <script>
-            function toggleDiv() {
-                var x = document.getElementById('graph');
-                if ( window.getComputedStyle(x, null).getPropertyValue("display") === 'none') {
-                    x.style.display = 'block';
-                } else {
-                    x.style.display = 'none';
-                }
-            }
-        </script>
+        <script src = "{{url_for('static', filename = 'script.js')}}"></script>
     </body>
 </html>
