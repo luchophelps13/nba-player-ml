@@ -31,7 +31,7 @@ View the website here! -> https://nba-machine-learning.herokuapp.com
 
 12. Run "git add . " to add all of the files to the repo
 
-13. Run "git commit -m 'My first commit'". If you ever make any other commits (updating/deleting/adding files), rerun this and change '-m' to '-am'
+13. Run "git commit -m {message} ". If you ever make any other commits (updating/deleting/adding files), rerun this and change the message.
 
 13. Run "git remote -v" to see where you can push to
 
