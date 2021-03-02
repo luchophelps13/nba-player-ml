@@ -1,4 +1,4 @@
-Created on February 8th, 2021.
+Created on February 26th, 2021.
 
 Full fledge Flask app (Python) where the user enters a player and Linear Regression is used to predict the player's PPG in the coming season. The web service used to host is Heroku.
 The data was gathered from https://www.landofbasketball.com/.
